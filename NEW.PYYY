@@ -1,0 +1,24 @@
+# Python3 code to demonstrate working of
+# Divide String into Equal K chunks
+# Using list comprehension
+from collections import defaultdict
+ 
+# Initializing strings
+test_str = 'geeksforgeeks is best for geeks and best for CS'
+ 
+# Printing original string
+print("The original string is : " + str(test_str))
+ 
+# Initializing count_list
+count_list = ['best', 'geeksforgeeks', 'computer', 'better', 'for', 'and']
+ 
+# Computing frequency
+res = defaultdict(int)
+ 
+for sub in test_str.split():
+    res[sub] += 1
+ 
+# Assigning to list words
+res = [res[sub] for sub in count_list]
+ # Printing result
+print("The list words frequency : " + str(res))
